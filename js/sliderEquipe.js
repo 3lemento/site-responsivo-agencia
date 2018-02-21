@@ -2,7 +2,7 @@ $(function(){
 
 	var delay = 3000;
 	var curIndex = 0;
-	var sizeBoxSingle = 100 / amt;
+	var amt;
 
 	initSlider();
 	autoPlay();
@@ -19,6 +19,7 @@ $(function(){
 				$('.slider-bullets').append('<span style="background-color:rgb(170,170,170);"></span>')
 			else
 				$('.slider-bullets').append('<span></span>');
+			return false
 		}
 	}
 
@@ -28,13 +29,12 @@ $(function(){
 			if(curIndex == amt)
 				curIndex = 0;
 			goToSlider(curIndex);
-			console.log('chamando');
 		},delay)
 	}
 
 	function goToSlider(curIndex){
-		var offSetX = $('.sobre-autor').eq(curIndex).offset().left;
+		var offSetX = $('.sobre-autor').eq(curIndex).offset().left - $('.scroll-wraper').offset().left;
 
-		$('.scrollEquipe').animate({'scrollLeft':offSetX+'px'});
+		$('.scrollEquipe').animate({'scrollLeft':offSetX});
 	}
 })

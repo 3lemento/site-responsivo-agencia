@@ -274,6 +274,7 @@ section.sessao1 .container{
 .sobre-autor{
 	float: left;
 	width: 100%;
+	padding: 0 20px;
 
 }
 
@@ -307,6 +308,31 @@ section.sessao1 .container{
 	background-color: gray;
 }
 
+.titulo-autor .img-autor1{
+	float: left;
+	width: 40px;
+	height: 40px;
+	background-image: url('../images/heyglon.png');
+	background-size: 100% 100%;
+	border-radius: 20px;
+	position: relative;
+	top: 5px;
+	right: 8px;
+	background-color: gray;
+}
+
+.titulo-autor .img-autor2{
+	float: left;
+	width: 40px;
+	height: 40px;
+	background-image: url('../images/joao.png');
+	background-size: 100% 100%;
+	border-radius: 20px;
+	position: relative;
+	top: 5px;
+	background-color: gray;
+}
+
 .titulo-autor p{
 	color: #232323;
 	font-style: italic;
@@ -329,7 +355,7 @@ section.sessao1 .container{
 	width: 100%;
 	float: left;
 	margin-top: 12px;
-	padding-left: 30px;
+	padding-left: 40px;
 }
 
 .slider-bullets span{
