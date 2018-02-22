@@ -16,10 +16,10 @@ $(function(){
 
 		for(var i = 0; i < amt; i++){
 			if(i == 0)
-				$('.slider-bullets').append('<span style="background-color:rgb(170,170,170);"></span>')
+				$('.slider-bullets').append('<span style="background-color:rgb(120,120,120);"></span>')
 			else
 				$('.slider-bullets').append('<span></span>');
-			return false
+			
 		}
 	}
 
@@ -34,7 +34,8 @@ $(function(){
 
 	function goToSlider(curIndex){
 		var offSetX = $('.sobre-autor').eq(curIndex).offset().left - $('.scroll-wraper').offset().left;
-
-		$('.scrollEquipe').animate({'scrollLeft':offSetX});
+		$('.slider-bullets span').css('background-color','rgb(200,200,200)')
+		$('.slider-bullets span').eq(curIndex).css('background-color','rgb(120,120,120)')
+		$('.scrollEquipe').stop().animate({'scrollLeft':offSetX+'px'});
 	}
 })
